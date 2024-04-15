@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Pop-up Boxes and Functions</title>
+    <style>
+        /* Center align the content */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        /* Style for buttons */
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script>
+        // Function to display current date
+        function displayDate() {
+            var currentDate = new Date().toDateString();
+            document.getElementById("dateDisplay").value = currentDate;
+        }
+
+        // Function to calculate factorial
+        function calculateFactorial() {
+            var n = parseInt(prompt("Enter a number:"));
+            var factorial = 1;
+            for (var i = 1; i <= n; i++) {
+                factorial *= i;
+            }
+            alert("Factorial of " + n + " is " + factorial);
+        }
+
+        // Function to display multiplication table
+        function displayMultiplicationTable() {
+            var n = parseInt(prompt("Enter a number:"));
+            var table = "";
+            for (var i = 1; i <= 10; i++) {
+                table += n + " x " + i + " = " + (n * i) + "\n";
+            }
+            alert("Multiplication Table of " + n + ":\n\n" + table);
+        }
+
+        // Function to calculate sum of numbers
+        function calculateSum() {
+            var n = parseInt(prompt("Enter a number:"));
+            var sum = 0;
+            for (var i = 1; i <= n; i++) {
+                sum += i;
+            }
+            alert("Sum of numbers from 1 to " + n + " is " + sum);
+        }
+    </script>
+</head>
+<body>
+    <h2>JavaScript Pop-up Boxes and Functions</h2>
+
+    <!-- Display Date Button -->
+    <input type="text" id="dateDisplay" readonly><br>
+    <button onclick="displayDate()">Display Date</button><br>
+
+    <!-- Factorial Button -->
+    <button onclick="calculateFactorial()">Calculate Factorial</button><br>
+
+    <!-- Multiplication Table Button -->
+    <button onclick="displayMultiplicationTable()">Display Multiplication Table</button><br>
+
+    <!-- Sum of Numbers Button -->
+    <button onclick="calculateSum()">Calculate Sum</button>
+</body>
+</html>

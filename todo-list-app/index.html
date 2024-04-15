@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body ng-app="toDoApp" ng-controller="toDoCtrl">
+    <div class="container">
+        <h1>To-Do List</h1>
+        <input type="text" placeholder="Add a new task" ng-model="newTask" ng-keypress="addTask($event)">
+        <ul>
+            <li ng-repeat="task in tasks">
+                {{ task.name }}
+                <button ng-click="removeTask(task)">Remove</button>
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
