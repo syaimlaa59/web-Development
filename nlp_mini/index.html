@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Audio Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Emotion Audio Visualizer</h1>
+    <div class="emotions-container">
+        <button id="fear-btn">Fear</button>
+        <button id="angry-btn">Angry</button>
+        <button id="happy-btn">Happy</button>
+        <button id="ps-btn">Surprise</button>
+        <button id="sad-btn">Sad</button>
+        <button id="neutral-btn">Neutral</button>
+        <button id="disgust-btn">Disgust</button>
+    </div>
+    <div id="media-container">
+        <img id="spectrogram-img" src="" alt="Spectrogram">
+        <img id="waveplot-img" src="" alt="Waveplot">
+        <audio id="emotion-audio" controls></audio>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
